@@ -1,6 +1,6 @@
 --https://v3rmillion.net/showthread.php?tid=723696
 -- Modified By King
--- Mod V2.2
+-- Mod V2.1
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -849,17 +849,13 @@ if doSupplier then
           local s = bcolorToSupply[btn.BrickColor.Name]
         if supplyCounts[s] < settings.refill_end then
           local count = 0
-              for i=1,#boxes do
-                local box = boxes[i]
-                if box.Anchored==false and box.Position.Z < -940 and bcolorToSupply[box.BrickColor.Name] and supplyCounts[bcolorToSupply[box.BrickColor.Name]]<settings.refill_end then
-                  box.CFrame = CFrame.new(38-4.3*math.floor(j/2),5,-7-5*(j%2))
-                  network:FireServer("UpdateProperty", box, "CFrame", box.CFrame)
-                  lastBox=box
-                  j=j+1
-                  if j>13 then break end
-                end
+          if #boxes > 30 then
+            for i=1,#boxes do
+              local box = boxes[i]
+              if bcolorToSupply[box.BrickColor.Name]==s and box.Anchored==false and box.Position.Z < -940 then
+                count=count+1
               end
-
+            end
           end
           if count < 2 then
             if needtp then
