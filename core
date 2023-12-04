@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V3.1
+-- Mod V3.2
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -840,12 +840,12 @@ if doSupplier then
     while doSupplier do
       --check if refill is done otherwise hit buttons
       local fulfilled=true
-      local ii
+      local ii = 1
       local boxes = workspace.AllSupplyBoxes:GetChildren()
       for key_b, value_b in pairs(boxes) do
       print(key_b, value_b)
-       ii = key_b
-      print("O valor do ii é: ", ii)
+       ii = value_b
+      print(ii)
        end
       print("Comprimento de tabela: ", #boxes)
       print(ii)
