@@ -1,6 +1,6 @@
 --https://v3rmillion.net/showthread.php?tid=723696
 -- Modified By King
--- Mod V2.4
+-- Mod V2.5
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -842,7 +842,9 @@ if doSupplier then
       --check if refill is done otherwise hit buttons
       local fulfilled=true
       local boxes = workspace.AllSupplyBoxes:GetChildren()
-      print(boxes, boxes[i])
+      for key_b, value_b in pairs(boxes) do
+      print(key_b, value_b)
+       end
       for yy=1,2 do
       local needtp=true
       local realc = 0
