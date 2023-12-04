@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V3.2
+-- Mod V3.3
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -844,7 +844,7 @@ if doSupplier then
       local boxes = workspace.AllSupplyBoxes:GetChildren()
       for key_b, value_b in pairs(boxes) do
       print(key_b, value_b)
-       ii = value_b
+       ii = key_b
       print(ii)
        end
       print("Comprimento de tabela: ", #boxes)
