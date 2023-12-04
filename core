@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V2.8
+-- Mod V2.9
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -852,7 +852,7 @@ if doSupplier then
       local realc = 0
       for _,btn in ipairs(supplyButtons) do
           local s = bcolorToSupply[btn.BrickColor.Name]
-            local papaleguas = supplyCounts[s]
+            local papaleguas = ii
           print("O supply counts: ", papaleguas)
         if papaleguas < settings.refill_end then
           local count = 0
