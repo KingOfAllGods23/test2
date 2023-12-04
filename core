@@ -1,6 +1,6 @@
 --https://v3rmillion.net/showthread.php?tid=723696
 -- Modified By King
--- Mod V2.1
+-- Mod V2.3
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -829,7 +829,7 @@ if doSupplier then
   for s,c in pairs(supplyCounts) do
     if c <= settings.refill_at then
       refill=true
-      print(supplyCounts)
+      print(s, c)
       break
     end
   end
