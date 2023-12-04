@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V3.5
+-- Mod V3.6
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -862,6 +862,7 @@ if doSupplier then
           if #boxes > 30 then
             for i=1, #boxes do
               local box = boxes[i]
+              print(box.BrickColor.Name)
               if bcolorToSupply[box.BrickColor.Name]==s and box.Anchored==false and box.Position.Z < -940 then
                 count=count+1
               end
