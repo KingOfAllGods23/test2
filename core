@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V3.4
+-- Mod V3.5
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -856,6 +856,7 @@ if doSupplier then
           local s = bcolorToSupply[btn.BrickColor.Name]
             local papaleguas = ii
           print("O supply counts: ", papaleguas)
+          print("cor pra suprir:", s)
         if papaleguas < settings.refill_end then
           local count = 0
           if #boxes > 30 then
