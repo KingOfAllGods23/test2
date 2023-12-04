@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V2.9
+-- Mod V3.0
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -845,8 +845,10 @@ if doSupplier then
       for key_b, value_b in pairs(boxes) do
       print(key_b, value_b)
        ii = key_b
+      print(ii)
        end
       print("Comprimento de tabela: ", #boxes)
+      print(ii)
       for yy=1,2 do
       local needtp=true
       local realc = 0
