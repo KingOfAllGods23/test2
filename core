@@ -1,5 +1,5 @@
 -- Modified By King
--- Mod V3.0
+-- Mod V3.1
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -845,7 +845,7 @@ if doSupplier then
       for key_b, value_b in pairs(boxes) do
       print(key_b, value_b)
        ii = key_b
-      print(ii)
+      print("O valor do ii é: ", ii)
        end
       print("Comprimento de tabela: ", #boxes)
       print(ii)
