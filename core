@@ -1,6 +1,5 @@
---https://v3rmillion.net/showthread.php?tid=723696
 -- Modified By King
--- Mod V2.5
+-- Mod V2.6
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -841,10 +840,13 @@ if doSupplier then
     while doSupplier do
       --check if refill is done otherwise hit buttons
       local fulfilled=true
+      local ii
       local boxes = workspace.AllSupplyBoxes:GetChildren()
       for key_b, value_b in pairs(boxes) do
       print(key_b, value_b)
+       ii = key_b
        end
+      print("Comprimento de tabela: ", #boxes)
       for yy=1,2 do
       local needtp=true
       local realc = 0
@@ -853,7 +855,7 @@ if doSupplier then
         if supplyCounts[s] < settings.refill_end then
           local count = 0
           if #boxes > 30 then
-            for i=1,#boxes do
+            for i=1, #boxes do
               local box = boxes[i]
               if bcolorToSupply[box.BrickColor.Name]==s and box.Anchored==false and box.Position.Z < -940 then
                 count=count+1
