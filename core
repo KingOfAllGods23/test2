@@ -1,6 +1,7 @@
 -- Modified By King
--- Mod V4.2
-local pizza_titulo = "Fábrica de Pizza V4.2"
+-- Mod V4.3
+local pizza_titulo = "Fábrica de Pizza V4.3"
+local p_akt = "Original por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -152,7 +153,7 @@ rightCamBtn=Create("ImageButton",camframe,{Name="rightCamBtn", Image="rbxassetid
 BackgroundColor3=Color3.new(1,1,1)})
 leftCamBtn=Create("ImageButton",camframe,{Name="leftCamBtn", Image="rbxassetid://144168163", Size=UDim2.new(0.333,0,1,0), BackgroundTransparency=1, BackgroundColor3=Color3.new(1,1,1)})
 centerCamBtn=Create("ImageButton",camframe,{Name="centerCamBtn", Image="rbxassetid://58282192", Size=UDim2.new(0.333,0,1,0), Position=UDim2.new(0.333,0,0,0), BackgroundTransparency=1, BackgroundColor3=Color3.new(1,1,1)})
-creditLbl=Create("TextLabel",main,{Position=UDim2.new(0,0,1,5),Size=UDim2.new(0,100,0,15),BackgroundTransparency=1,TextColor3=Color3.new(1,1,1),Text="by sirelKilla",TextScaled=true,TextStrokeTransparency=.8})
+creditLbl=Create("TextLabel",main,{Position=UDim2.new(0,0,1,5),Size=UDim2.new(0,100,0,15),BackgroundTransparency=1,TextColor3=Color3.new(1,1,1),Text=p_akt,TextScaled=true,TextStrokeTransparency=.8})
 
 local function toggleCashier(bool)
 if bool~=nil then
@@ -829,7 +830,7 @@ if doSupplier then
   for s,c in pairs(supplyCounts) do
     if c <= settings.refill_at then
       refill=true
-      print(s, c)
+      -- print(s, c)
       break
     end
   end
@@ -844,12 +845,12 @@ if doSupplier then
       local ii = 1
       local boxes = workspace.AllSupplyBoxes:GetChildren()
       for key_b, value_b in pairs(boxes) do
-      print(key_b, value_b)
+      -- print(key_b, value_b)
        ii = key_b
-      print(ii)
+      -- print(ii)
        end
-      print("Comprimento de tabela: ", #boxes)
-      print(ii)
+      -- print("Comprimento de tabela: ", #boxes)
+      -- print(ii)
       for yy=1,2 do
       local needtp=true
       local realc = 0
@@ -862,8 +863,8 @@ if doSupplier then
             for ss,c in pairs(supplyCounts) do
               if c > settings.refill_at then
                 refill=false
-                print("refil terminado para", ss) 
-                print(ss, c)
+               -- print("refil terminado para", ss) 
+               -- print(ss, c)
               end
             end
             local function todosItensMaioresOuIguais(tabela)
@@ -882,7 +883,7 @@ if doSupplier then
 
             -- Verifica se todos os itens estão iguais ou acima do valor mínimo
             if todosItensMaioresOuIguais(supplyCounts, parar_de_abastecer_em) then
-                print("Tudo cheio")
+                print("Tudo cheio, encerrando fornecimento")
               local function liga_suplier()
                 doSupplier=true
                 print("Função supplier ligada de novo")
@@ -899,7 +900,7 @@ if doSupplier then
               fulfilled=true
               desliga_suplier()
             else
-                print("Alguns itens estão abaixo do valor mínimo")
+                print("Alguns itens estavam/estão abaixo do valor mínimo, fornecendo...")
               abastece = "sim"
             end
 
