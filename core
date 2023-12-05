@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.0
-local pizza_titulo = "Fábrica de Pizza V4.0"
+-- Mod V4.1
+local pizza_titulo = "Fábrica de Pizza V4.1"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -856,8 +856,8 @@ if doSupplier then
       for _,btn in ipairs(supplyButtons) do
           local s = bcolorToSupply[btn.BrickColor.Name]
             local papaleguas = ii
-          print("O supply counts: ", papaleguas)
-          print("cor pra suprir:", s)
+          -- print("O supply counts: ", papaleguas)
+          -- print("cor pra suprir:", s)
             for ss,c in pairs(supplyCounts) do
               if c > settings.refill_at then
                 refill=false
@@ -900,12 +900,12 @@ if doSupplier then
                 print("Alguns itens estão abaixo do valor mínimo")
             end
 
-        if papaleguas < settings.refill_end then
+        if papaleguas < settings.refill_end and refill==true then
           local count = 0
           if #boxes > 30 then
             for i=1, #boxes do
               local box = boxes[i]
-              print(box.BrickColor.Name)
+              -- print(box.BrickColor.Name)
               if bcolorToSupply[box.BrickColor.Name]==s and box.Anchored==false and box.Position.Z < -940 then
                 count=count+1
               end
