@@ -1,7 +1,7 @@
 -- Modified By King
--- Mod V4.3
-local pizza_titulo = "Fábrica de Pizza V4.3"
-local p_akt = "Original por sirelKilla | Modificado por King | ©AKT"
+-- Mod V4.3.1
+local pizza_titulo = "Fábrica de Pizza V4.3.1"
+local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -883,16 +883,16 @@ if doSupplier then
 
             -- Verifica se todos os itens estão iguais ou acima do valor mínimo
             if todosItensMaioresOuIguais(supplyCounts, parar_de_abastecer_em) then
-                print("Tudo cheio, encerrando fornecimento")
+              --  print("Tudo cheio, encerrando fornecimento")
               local function liga_suplier()
                 doSupplier=true
-                print("Função supplier ligada de novo")
+              --  print("Função supplier ligada de novo")
               end
               local function desliga_suplier()
                 if doSupplier then
                   doSupplier = false
                   smoothTP(CFrame.new(54.45, 4.02, -15)) wait(.1)
-                  print("Função supplier desativada")
+                --  print("Função supplier desativada")
                   liga_suplier()
                 end
               end
@@ -900,7 +900,7 @@ if doSupplier then
               fulfilled=true
               desliga_suplier()
             else
-                print("Alguns itens estavam/estão abaixo do valor mínimo, fornecendo...")
+               -- print("Alguns itens estavam/estão abaixo do valor mínimo, fornecendo...")
               abastece = "sim"
             end
 
