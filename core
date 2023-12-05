@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V3.9
-local pizza_titulo = "Fábrica de Pizza V3.9"
+-- Mod V3.9.1
+local pizza_titulo = "Fábrica de Pizza V3.9.1"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -865,9 +865,9 @@ if doSupplier then
                 print(ss, c)
               end
             end
-            local function todosItensMaioresOuIguais(tabela, valorMinimo)
+            local function todosItensMaioresOuIguais(tabela)
                 for chave, valor in pairs(tabela) do
-                    if valor < valorMinimo then
+                    if valor < settings.refill_end then
                         return false
                     end
                 end
@@ -877,7 +877,7 @@ if doSupplier then
             -- Tabela de contagem de suprimentos
 
             -- Valor mínimo para abastecer
-            local parar_de_abastecer_em = settings.refill_end_At
+            local parar_de_abastecer_em = settings.refill_end
 
             -- Verifica se todos os itens estão iguais ou acima do valor mínimo
             if todosItensMaioresOuIguais(supplyCounts, parar_de_abastecer_em) then
