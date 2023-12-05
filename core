@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.1
-local pizza_titulo = "Fábrica de Pizza V4.1"
+-- Mod V4.1.1
+local pizza_titulo = "Fábrica de Pizza V4.1.1"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -900,7 +900,7 @@ if doSupplier then
                 print("Alguns itens estão abaixo do valor mínimo")
             end
 
-        if papaleguas < settings.refill_end and refill==true then
+        if papaleguas < settings.refill_end and refill then
           local count = 0
           if #boxes > 30 then
             for i=1, #boxes do
