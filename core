@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V3.9.1
-local pizza_titulo = "Fábrica de Pizza V3.9.1"
+-- Mod V3.9.2
+local pizza_titulo = "Fábrica de Pizza V3.9.2"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
 if not (getrawmetatable and getupvalues and setupvalue and (getreg or debug.getregistry)) then
@@ -882,6 +882,8 @@ if doSupplier then
             -- Verifica se todos os itens estão iguais ou acima do valor mínimo
             if todosItensMaioresOuIguais(supplyCounts, parar_de_abastecer_em) then
                 print("Tudo cheio")
+              refill=false
+              fulfilled=true
             else
                 print("Alguns itens estão abaixo do valor mínimo")
             end
