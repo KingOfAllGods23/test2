@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.3.1
-local pizza_titulo = "Fábrica de Pizza V4.3.1"
+-- Mod V4.3.2
+local pizza_titulo = "Fábrica de Pizza V4.3.2 (DEV)"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -589,6 +589,7 @@ for zz=1,18 do
       end
     end
     if order then
+        print("esse é o pedido", order)
       if order=="Dew" and cookD and tick()-cookDtick>0.8 then
         --move dew if ordered
         cookDtick=tick()
