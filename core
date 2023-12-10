@@ -1,6 +1,6 @@
 -- Modified By King
 -- Mod V4.3.1
-local pizza_titulo = "Fábrica de Pizza V4.3.1 dev"
+local pizza_titulo = "Fábrica de Pizza V4.3.1"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
