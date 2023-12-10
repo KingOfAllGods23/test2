@@ -1,6 +1,6 @@
 -- Modified By King
 -- Mod V4.3.1
-local pizza_titulo = "Fábrica de Pizza V4.3.3 dev"
+local pizza_titulo = "Fábrica de Pizza V4.3.4 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -557,6 +557,7 @@ end
 local function tryCook()
 for zz=1,18 do
   local order = getOrders()[1]
+  print("pedido: ", order)
   local topping
   if order=="Pepperoni" or order=="Sausage" then topping=order end
   local cookD = FindFirstDew()
