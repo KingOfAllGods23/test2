@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.3.1
-local pizza_titulo = "Fábrica de Pizza V4.3.2 dev"
+-- Mod V4.4
+local pizza_titulo = "Fábrica de Pizza V4.4 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -593,6 +593,10 @@ for zz=1,18 do
         network:FireServer("UpdateProperty", cookP, "CFrame", CFrame.new(RNG:NextNumber(56,57),4.1,38))
       end
     end
+    print("debug de pedido: ", order)
+    if not order then
+        order = "Dew"
+      end
     if order then
         print("pedido:", order, "tick", tick()-cookDtick)
       if order=="Dew" and cookD and tick()-cookDtick>0.8 then
