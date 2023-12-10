@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.6.1
-local pizza_titulo = "Fábrica de Pizza V4.6.1 dev"
+-- Mod V4.6.2
+local pizza_titulo = "Fábrica de Pizza V4.6.2 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -397,7 +397,10 @@ local tempCookingDict = {}
 for i,v in pairs(cookingDict) do tempCookingDict[i]=v end
 print(i, v)
 local children = workspace.Orders:GetChildren()
-print("isso é o children linha 399: ", children)
+  for pal,cor in pairs(children) do
+    print("linha 401", pal, cor)
+  end
+-- print("isso é o children linha 399: ", children)
 for i=1,#children do
   local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
   print(o)  
