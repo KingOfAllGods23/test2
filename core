@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.3.5
-local pizza_titulo = "Fábrica de Pizza V4.3.5"
+-- Mod V4.3.1
+local pizza_titulo = "Fábrica de Pizza V4.3.1 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -412,10 +412,8 @@ return orders
 end
 local function FindFirstDew()
 local children = workspace.AllMountainDew:GetChildren()
-  print(childen)
 for i=1,#children do
   local d = children[i]
-    print(d)
   if (ffc(d,"IsBurned")==nil or d.IsBurned.Value==false) and not d.Anchored then
     return d
   end
