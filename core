@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.6.4
-local pizza_titulo = "Fábrica de Pizza V4.6.4 dev"
+-- Mod V4.6.5
+local pizza_titulo = "Fábrica de Pizza V4.6.5 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -421,7 +421,7 @@ local children = workspace.AllMountainDew:GetChildren()
   print("Contqador de Dews: ", children)
   for fla, flu in pairs(children) do
     if fla then
-      print(fla[1])
+      print(fla)
     end
   if not fla then
   print("Sem dews")
