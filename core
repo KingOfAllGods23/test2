@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.4
-local pizza_titulo = "Fábrica de Pizza V4.4 dev"
+-- Mod V4.5
+local pizza_titulo = "Fábrica de Pizza V4.5 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -559,6 +559,9 @@ local function tryCook()
 for zz=1,18 do
   local order = getOrders()[1]
   local all_orders = getOrders()
+    for refri, quantidade in pairs(all_orders) do
+      print (refri, quantidade)
+    end
   print("pedido: ", all_orders)
   local topping
   if order=="Pepperoni" or order=="Sausage" then topping=order end
