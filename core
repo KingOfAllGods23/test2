@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.6
-local pizza_titulo = "Fábrica de Pizza V4.6 dev"
+-- Mod V4.6.1
+local pizza_titulo = "Fábrica de Pizza V4.6.1 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -416,6 +416,9 @@ end
 local function FindFirstDew()
 local children = workspace.AllMountainDew:GetChildren()
   print("Contqador de Dews: ", children)
+  for fla, flu in pairs(children) do
+    print(fla, flu)
+  end
 for i=1,#children do
   local d = children[i]
    -- print(d)
