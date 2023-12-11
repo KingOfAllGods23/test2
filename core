@@ -406,7 +406,7 @@ end
 
 
 
--- tentativa 8
+-- tentativa 9
 
 
 
@@ -421,6 +421,7 @@ local function getOrders()
 local orders={}
 local tempCookingDict = {}
 for i,v in pairs(cookingDict) do tempCookingDict[i]=v end
+print(tempCookingDict)
 local children = workspace.Orders:GetChildren()
  -- for pal,cor in pairs(children) do
    -- print("linha 401", pal, cor)
