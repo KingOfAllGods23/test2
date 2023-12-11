@@ -393,7 +393,7 @@ for _, child in ipairs(workspace:GetChildren()) do
       local imageLabel = sg:FindFirstChild("ImageLabel")
       if imageLabel and imageLabel:IsA("ImageLabel") then
           local imageValue = imageLabel.Image:match("%d+$")
-          print("imageValue:", imageValue)  -- Adicionado para depuração
+          -- print("imageValue:", imageValue)  -- Adicionado para depuração
           if imageValue and imageValue == targetValue then
               print("Objeto correspondente ao valor 'Dew':", child)
           end
@@ -406,7 +406,7 @@ end
 
 
 
--- tentativa 7
+-- tentativa 8
 
 
 
