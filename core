@@ -384,7 +384,7 @@ for i=1,#children do
 end
 return p,d
 end
-
+local function get_value_dew()
 local targetValue = "Dew"
 
 for _, child in ipairs(workspace:GetChildren()) do
@@ -400,13 +400,13 @@ for _, child in ipairs(workspace:GetChildren()) do
       end
   end
 end
+end
 
 
 
 
 
-
--- tentativa 6
+-- tentativa 7
 
 
 
@@ -420,7 +420,7 @@ local boxerWarned=false
 local function getOrders()
 local orders={}
 local tempCookingDict = {}
-for i,v in pairs(cookingDict) do print("linha 397", i, v)tempCookingDict[i]=v end
+for i,v in pairs(cookingDict) do tempCookingDict[i]=v end
 local children = workspace.Orders:GetChildren()
  -- for pal,cor in pairs(children) do
    -- print("linha 401", pal, cor)
@@ -428,6 +428,7 @@ local children = workspace.Orders:GetChildren()
 -- print("isso é o children linha 399: ", children)
 for i=1,#children do
   local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
+    get_value_dew()
  -- local o2 = orderDict[children[i].SG.ImageLabel]
  -- if o2 then print("Aqui o o2: ", o) end
  -- print(o)  
