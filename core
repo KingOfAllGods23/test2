@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.6.9
-local pizza_titulo = "Fábrica de Pizza V4.6.9 dev"
+-- Mod V4.7
+local pizza_titulo = "Fábrica de Pizza V4.7 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -385,8 +385,22 @@ end
 return p,d
 end
 
+local targetValue = "Dew"
+
+for _, child in ipairs(workspace:GetChildren()) do
+    local imageValue = child.SG.ImageLabel.Image:match("%d+$")
+    if imageValue and orderDict[imageValue] == targetValue then
+        -- Aqui você pode usar child ou imageValue conforme necessário
+        print("Objeto correspondente ao valor 'Dew':", child)
+        -- ou
+        -- print("Valor correspondente ao 'Dew':", imageValue)
+    end
+end
+
+
+
 local orderDict={["3540529228"]="Cheese",["3540530535"]="Sausage",["3540529917"]="Pepperoni",["2512571151"]="Dew",["2512441325"]="Dew"}
-local cookingDict = {Cheese=0,Sausage=0,Pepperoni=0,Dew=0}
+local cookingDict = {Cheese=0,Sausage=0,Pepperoni=0,Dew=0, Coke=0,}
 local cookPtick=0
 local cookDtick=0
 local cookWarned=false
