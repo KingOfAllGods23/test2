@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.6.7
-local pizza_titulo = "Fábrica de Pizza V4.6.7 dev"
+-- Mod V4.6.8
+local pizza_titulo = "Fábrica de Pizza V4.6.8 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -394,7 +394,7 @@ local boxerWarned=false
 local function getOrders()
 local orders={}
 local tempCookingDict = {}
-for i,v in pairs(cookingDict) do tempCookingDict[i]=v print(i, v) end
+for i,v in pairs(cookingDict) do print("linha 397", i, v)tempCookingDict[i]=v end
 local children = workspace.Orders:GetChildren()
  -- for pal,cor in pairs(children) do
    -- print("linha 401", pal, cor)
@@ -402,8 +402,9 @@ local children = workspace.Orders:GetChildren()
 -- print("isso é o children linha 399: ", children)
 for i=1,#children do
   local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
-  print(o)  
+ -- print(o)  
   if o then
+      print("Tem o Ó e é esse valor:", o)
     if tempCookingDict[o]>0 then
       --ignores oven pizzas, so new orders are priority
       tempCookingDict[o]=tempCookingDict[o]-1
