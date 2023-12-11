@@ -388,17 +388,18 @@ end
 local targetValue = "Dew"
 
 for _, child in ipairs(workspace:GetChildren()) do
-    local imageLabel = child:FindFirstChild("SG") and child.SG:FindFirstChild("ImageLabel")
-    if imageLabel then
-        local imageValue = imageLabel.Image:match("%d+$")
-        if imageValue and orderDict[imageValue] == targetValue then
-            print("Objeto correspondente ao valor 'Dew':", child)
-            -- ou
-            -- print("Valor correspondente ao 'Dew':", imageValue)
-        end
-    end
+  local imageLabel = child:FindFirstChild("SG") and child.SG:FindFirstChild("ImageLabel")
+  if imageLabel then
+      local imageValue = imageLabel.Image and imageLabel.Image:match("%d+$")
+      if imageValue and orderDict[imageValue] == targetValue then
+          print("Objeto correspondente ao valor 'Dew':", child)
+          -- ou
+          -- print("Valor correspondente ao 'Dew':", imageValue)
+      end
+  end
 end
 
+-- tentativa 1
 
 
 
