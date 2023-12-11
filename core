@@ -406,7 +406,7 @@ end
 
 
 
--- tentativa 13
+-- tentativa 14
 
 
 
@@ -428,7 +428,7 @@ local children = workspace.Orders:GetChildren()
  -- end
 -- print("isso é o children linha 399: ", children)
 for i=1,#children do
-    print(#children)
+    print(children[i].SG.ImageLabel.Image)
    local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
     -- local o = orderDict[children[i].SG.ImageLabel.Image:match(":([%d]+)$")]
 
