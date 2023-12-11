@@ -388,23 +388,25 @@ end
 local targetValue = "Dew"
 
 for _, child in ipairs(workspace:GetChildren()) do
-    local sg = child:FindFirstChild("SG")
-    if sg then
-        local imageLabel = sg:FindFirstChild("ImageLabel")
-        if imageLabel and imageLabel:IsA("ImageLabel") then
-            local imageValue = imageLabel.Image:match("%d+$")
-            if imageValue and targetValue == "Dew" then
-                print("Objeto correspondente ao valor 'Dew':", child)
-            end
-        end
-    end
+  local sg = child:FindFirstChild("SG")
+  if sg then
+      local imageLabel = sg:FindFirstChild("ImageLabel")
+      if imageLabel and imageLabel:IsA("ImageLabel") then
+          local imageValue = imageLabel.Image:match("%d+$")
+          print("imageValue:", imageValue)  -- Adicionado para depuração
+          if imageValue and imageValue == targetValue then
+              print("Objeto correspondente ao valor 'Dew':", child)
+          end
+      end
+  end
 end
 
 
 
 
 
--- tentativa 5
+
+-- tentativa 6
 
 
 
@@ -426,11 +428,11 @@ local children = workspace.Orders:GetChildren()
 -- print("isso é o children linha 399: ", children)
 for i=1,#children do
   local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
-  local o2 = orderDict[children[i].SG.ImageLabel]
-  if o2 then print("Aqui o o2: ", o) end
+ -- local o2 = orderDict[children[i].SG.ImageLabel]
+ -- if o2 then print("Aqui o o2: ", o) end
  -- print(o)  
   if o then
-      print("Tem o Ó e é esse valor:", o)
+    --  print("Tem o Ó e é esse valor:", o)
     if tempCookingDict[o]>0 then
       --ignores oven pizzas, so new orders are priority
       tempCookingDict[o]=tempCookingDict[o]-1
@@ -445,14 +447,14 @@ end
 local function FindFirstDew()
 local children = workspace.AllMountainDew:GetChildren()
   --print("Contqador de Dews: ", children)
-  for fla, flu in pairs(children) do
-    if fla~=nil then
-      print("Tem dew! linha 423", fla)
-    end
-  if fla==nil then
-  print("Sem dews")
-  end
-  end
+  --for fla, flu in pairs(children) do
+  --  if fla~=nil then
+    --  print("Tem dew! linha 423", fla)
+  --  end
+--  if fla==nil then
+--  print("Sem dews")
+ -- end
+ -- end
 for i=1,#children do
   local d = children[i]
    -- print(d)
