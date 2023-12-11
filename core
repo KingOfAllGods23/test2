@@ -1,6 +1,6 @@
 -- Modified By King
--- Mod V4.7.1
-local pizza_titulo = "Fábrica de Pizza V4.7.1 dev"
+-- Mod V5.0
+local pizza_titulo = "Fábrica de Pizza V5.0 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -421,14 +421,12 @@ local function getOrders()
 local orders={}
 local tempCookingDict = {}
 for i,v in pairs(cookingDict) do tempCookingDict[i]=v end
-for goku, vegeta in pairs(tempCookingDict) do print(goku, vegeta) end
 local children = workspace.Orders:GetChildren()
  -- for pal,cor in pairs(children) do
    -- print("linha 401", pal, cor)
  -- end
 -- print("isso é o children linha 399: ", children)
 for i=1,#children do
-    print(children[i].SG.ImageLabel.Image)
    local o = orderDict[children[i].SG.ImageLabel.Image:match("%d+$")]
     -- local o = orderDict[children[i].SG.ImageLabel.Image:match(":([%d]+)$")]
 
