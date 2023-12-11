@@ -406,13 +406,13 @@ end
 
 
 
--- tentativa 10
+-- tentativa 11
 
 
 
 
 local orderDict={["3540529228"]="Cheese",["3540530535"]="Sausage",["3540529917"]="Pepperoni",["2512571151"]="Dew",["2512441325"]="Dew"}
-local cookingDict = {Cheese=0,Sausage=0,Pepperoni=0,Dew=0, Coke=0,}
+local cookingDict = {Cheese=0,Sausage=0,Pepperoni=0,Dew=0, Cola=0,}
 local cookPtick=0
 local cookDtick=0
 local cookWarned=false
