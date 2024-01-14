@@ -1,6 +1,6 @@
 -- Modified By King
 -- Mod V5.0
-local pizza_titulo = "Fábrica de Pizza V5.0 dev"
+local pizza_titulo = "Fábrica de Pizza V5.1 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -887,7 +887,7 @@ if doSupplier then
   for s,c in pairs(supplyCounts) do
     if c <= settings.refill_at then
       refill=true
-      -- print(s, c)
+       print(s, c)
       break
     end
   end
@@ -902,12 +902,12 @@ if doSupplier then
       local ii = 1
       local boxes = workspace.AllSupplyBoxes:GetChildren()
       for key_b, value_b in pairs(boxes) do
-      -- print(key_b, value_b)
+       print(key_b, value_b)
        ii = key_b
-      -- print(ii)
+       print(ii)
        end
-      -- print("Comprimento de tabela: ", #boxes)
-      -- print(ii)
+       print("Comprimento de tabela: ", #boxes)
+       print(ii)
       for yy=1,2 do
       local needtp=true
       local realc = 0
@@ -915,13 +915,13 @@ if doSupplier then
           local s = bcolorToSupply[btn.BrickColor.Name]
             local papaleguas = ii
             local abastece="não"
-          -- print("O supply counts: ", papaleguas)
-          -- print("cor pra suprir:", s)
+           print("O supply counts: ", papaleguas)
+           print("cor pra suprir:", s)
             for ss,c in pairs(supplyCounts) do
               if c > settings.refill_at then
                 refill=false
-               -- print("refil terminado para", ss) 
-               -- print(ss, c)
+                print("refil terminado para", ss) 
+                print(ss, c)
               end
             end
             local function todosItensMaioresOuIguais(tabela)
