@@ -1,6 +1,6 @@
 -- Modified By King
 -- Mod V5.0
-local pizza_titulo = "Fábrica de Pizza V5.1 dev"
+local pizza_titulo = "Fábrica de Pizza V5.2 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -887,7 +887,7 @@ if doSupplier then
   for s,c in pairs(supplyCounts) do
     if c <= settings.refill_at then
       refill=true
-       print(s, c)
+       print("Tipo de caixa: ", s, "Numero restante: ",c)
       break
     end
   end
