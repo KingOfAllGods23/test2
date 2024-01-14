@@ -1,6 +1,6 @@
 -- Modified By King
 -- Mod V5.0
-local pizza_titulo = "Fábrica de Pizza V5.2 dev"
+local pizza_titulo = "Fábrica de Pizza V5.3 dev"
 local p_akt = "Por sirelKilla | Modificado por King | ©AKT"
 getupvalues = getupvalues or debug.getupvalues
 setupvalue = setupvalue or debug.setupvalue
@@ -526,7 +526,7 @@ local function isFullyOpen(oven)
 return oven.IsOpen.Value==true and (oven.Door.Meter.RotVelocity.Z^2)^.5<.0001
 end
 
-local bcolorToSupply = {["Dark orange"]="Sausage",["Bright blue"]="Pepperoni",["Bright yellow"]="Cheese",["Bright red"]="TomatoSauce",["Navy blue"]="Dew",["Brick yellow"]="Dough",["Light stone grey"]="Box",["Really black"]="Dew"}
+local bcolorToSupply = {["Dark orange"]="Sausage",["Bright blue"]="Pepperoni",["Bright yellow"]="Cheese",["Bright red"]="TomatoSauce",["Navy blue"]="Dew",["Brick yellow"]="Dough",["Light stone grey"]="Box",["Really black"]="Dew",["Dark green"]="Dew"}
 local supplyButtons = {}
 for i,v in ipairs(workspace.SupplyButtons:GetChildren()) do
 supplyButtons[i] = v.Unpressed
